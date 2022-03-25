@@ -16,6 +16,14 @@ int	print_esp(const char c, va_list *print)
 		ft_putchar_fd(c, 1);
 	else if (c == 'p')
 		len = ft_printf_p((va_arg((*print), unsigned long int)), 0);
+	else if (c == 'd')
+		len = ft_printf_d((va_arg((*print), int)));
+	else if (c == 'u')
+		len = ft_printf_u((va_arg((*print), unsigned int)), 0);
+	else if (c == 'x')
+		len = ft_printf_x((va_arg((*print), int)), 0);
+	else if (c == 'X')
+		len = ft_printf_X((va_arg((*print), int)), 0);
 	return (len);
 }
 
@@ -44,16 +52,4 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(print);
 	return (len);
-}
-int	main(void)
-{
-	int	n;
-	int	n2;
-	void	*ptr;
-
-	n = printf("%s %i %% %p\n", "Hello World", 42, &ptr);
-	printf("%d \n", n);
-	n2 = ft_printf("%s %i %% %p\n", "Hello World", 42, &ptr);
-	printf("%d \n", n2);
-	return (n);	
 }

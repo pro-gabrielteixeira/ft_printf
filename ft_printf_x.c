@@ -1,9 +1,8 @@
 #include "ft_printf.h"
 
-
-int ft_conversor(unsigned long int n, int len)
+int ft_printf_x(int n, int len)
 {
-	char	hexa[17];
+    char	hexa[17];
     int     i;
 	char	s;
 
@@ -17,16 +16,9 @@ int ft_conversor(unsigned long int n, int len)
 	}
 	hexa[i] = '\0';
 	if (n > 15)
-		len = ft_conversor((n / 16), len);
+		len = ft_printf_x((n / 16), len);
 	n = n % 16;
 	len++;
 	ft_putchar_fd((hexa[n]), 1);
 	return (len);
-}
-
-int ft_printf_p(unsigned long int n, int len)
-{
-    ft_putstr_fd("0x", 1);
-    len = ft_conversor(n, len);
-    return (len + 2);
 }

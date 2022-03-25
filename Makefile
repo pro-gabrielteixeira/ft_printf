@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 HEADER = ./libft.h ft_printf.h
-SRC =  ft_printf.c ft_printf_c.c ft_printf_i.c ft_printf_s.c ft_printf_p.c
+SRC =  ft_printf.c ft_printf_c.c ft_printf_i.c ft_printf_s.c ft_printf_p.c ft_printf_d.c ft_printf_u.c ft_printf_x.c ft_printf_X.c
 
 OBJ = ${SRC:.c=.o}
 

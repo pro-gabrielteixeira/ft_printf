@@ -16,4 +16,12 @@ int     ft_printf_s(char *temp);
 
 int     ft_printf_p(unsigned long int n, int len);
 
+int     ft_printf_d(int n);
+
+int     ft_printf_u(unsigned int n, int len);
+
+int     ft_printf_x(int n, int len);
+
+int     ft_printf_X(int n, int len);
+
 #endif
