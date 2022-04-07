@@ -23,7 +23,7 @@ int	print_esp(const char c, va_list *print)
 	else if (c == 'x')
 		len = ft_printf_x((va_arg((*print), int)), 0);
 	else if (c == 'X')
-		len = ft_printf_X((va_arg((*print), int)), 0);
+		len = ft_printf_xx((va_arg((*print), int)), 0);
 	return (len);
 }
 

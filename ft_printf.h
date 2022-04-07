@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int     ft_printf(const char *formar, ...);
 
@@ -20,8 +21,8 @@ int     ft_printf_d(int n);
 
 int     ft_printf_u(unsigned int n, int len);
 
-int     ft_printf_x(int n, int len);
+int     ft_printf_x(unsigned int n, int len);
 
-int     ft_printf_X(int n, int len);
+int     ft_printf_xx(unsigned int n, int len);
 
 #endif
