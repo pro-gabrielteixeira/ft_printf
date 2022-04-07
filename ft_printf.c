@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gateixei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/07 21:07:38 by gateixei          #+#    #+#             */
+/*   Updated: 2022/04/07 21:15:52 by gateixei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -31,10 +42,10 @@ int	ft_printf(const char *format, ...)
 {
 	int		len;
 	char	*str;
+	va_list	print;
 
 	len = 0;
 	str = (char *) format;
-	va_list	print;
 	va_start(print, format);
 	while (str[0] != '\0')
 	{
